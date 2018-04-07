@@ -14,6 +14,7 @@
 		9DF50472207851B500D5E5AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF50470207851B500D5E5AC /* LaunchScreen.storyboard */; };
 		9DF5047D207851B500D5E5AC /* canvas_codepathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5047C207851B500D5E5AC /* canvas_codepathTests.swift */; };
 		9DF50488207851B500D5E5AC /* canvas_codepathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF50487207851B500D5E5AC /* canvas_codepathUITests.swift */; };
+		9DF50496207852C000D5E5AC /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF50495207852C000D5E5AC /* CanvasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9DF50483207851B500D5E5AC /* canvas-codepathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "canvas-codepathUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF50487207851B500D5E5AC /* canvas_codepathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = canvas_codepathUITests.swift; sourceTree = "<group>"; };
 		9DF50489207851B500D5E5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF50495207852C000D5E5AC /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				9DF50467207851B500D5E5AC /* AppDelegate.swift */,
 				9DF50469207851B500D5E5AC /* ViewController.swift */,
+				9DF50495207852C000D5E5AC /* CanvasViewController.swift */,
 				9DF5046B207851B500D5E5AC /* Main.storyboard */,
 				9DF5046E207851B500D5E5AC /* Assets.xcassets */,
 				9DF50470207851B500D5E5AC /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DF5046A207851B500D5E5AC /* ViewController.swift in Sources */,
+				9DF50496207852C000D5E5AC /* CanvasViewController.swift in Sources */,
 				9DF50468207851B500D5E5AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
