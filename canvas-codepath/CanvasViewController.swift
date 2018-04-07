@@ -63,9 +63,14 @@ class CanvasViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if (sender.state == .began) {
-            var imageView = sender.view as! UIImageView
+            let imageView = sender.view as! UIImageView
             newlyCreatedFace = UIImageView(image: imageView.image)
             view.addSubview(newlyCreatedFace)
+            
+            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanFaceCanvas(sender:)))
+            newlyCreatedFace.isUserInteractionEnabled = true
+            newlyCreatedFace.addGestureRecognizer(panGestureRecognizer)
+            
             newlyCreatedFace.center = imageView.center
             newlyCreatedFace.center.y += trayView.frame.origin.y
             
@@ -77,5 +82,19 @@ class CanvasViewController: UIViewController {
         } else if (sender.state == .ended) {
             
         }
+    }
+    
+    
+    @objc func didPanFaceCanvas(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+        if (sender.state == .began) {
+            newlyCreatedFace = sender.view as! UIImageView
+            newlyCreatedFaceOriginalCenter = newlyCreatedFace.center
+        } else if (sender.state == .changed) {
+            newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
+        } else if (sender.state == .ended) {
+            
+        }
+        
     }
 }
