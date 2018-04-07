@@ -71,6 +71,10 @@ class CanvasViewController: UIViewController {
             newlyCreatedFace.isUserInteractionEnabled = true
             newlyCreatedFace.addGestureRecognizer(panGestureRecognizer)
             
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapFace(sender:)))
+            tapGestureRecognizer.numberOfTapsRequired = 2
+            newlyCreatedFace.addGestureRecognizer(tapGestureRecognizer)
+            
             newlyCreatedFace.center = imageView.center
             newlyCreatedFace.center.y += trayView.frame.origin.y
             
@@ -97,6 +101,10 @@ class CanvasViewController: UIViewController {
         } else if (sender.state == .ended) {
             newlyCreatedFace.transform = newlyCreatedFace.transform.scaledBy(x: 0.5, y: 0.5)
         }
-        
+    }
+    
+    
+    @objc func didTapFace(sender: UITapGestureRecognizer) {
+        newlyCreatedFace.removeFromSuperview()
     }
 }
