@@ -90,10 +90,12 @@ class CanvasViewController: UIViewController {
         if (sender.state == .began) {
             newlyCreatedFace = sender.view as! UIImageView
             newlyCreatedFaceOriginalCenter = newlyCreatedFace.center
+            newlyCreatedFace.transform = CGAffineTransform(scaleX: 2, y: 2)
+            
         } else if (sender.state == .changed) {
             newlyCreatedFace.center = CGPoint(x: newlyCreatedFaceOriginalCenter.x + translation.x, y: newlyCreatedFaceOriginalCenter.y + translation.y)
         } else if (sender.state == .ended) {
-            
+            newlyCreatedFace.transform = newlyCreatedFace.transform.scaledBy(x: 0.5, y: 0.5)
         }
         
     }
